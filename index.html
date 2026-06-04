@@ -112,15 +112,16 @@
   .pitcher-name { font-weight: 500; color: #e2e8f0; padding-left: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }
   .inning-col { padding: 0 6px; white-space: nowrap; }
   .inn-dot { font-weight: 700; font-size: 0.85rem; }
-  .inn-seq { color: #334155; margin: 0 2px; }
   .stat-cell { color: #94a3b8; white-space: nowrap; text-align: right; }
 
   .wl-ok   { color: #94a3b8; }
   .wl-warn { color: #f59e0b; font-weight: 600; }
   .wl-high { color: #ef4444; font-weight: 700; }
 
-  .inn-wrap { display: inline-flex; flex-direction: column; gap: 1px; vertical-align: middle; }
-  .date-range { font-size: 0.6rem; color: #475569; letter-spacing: 0.02em; line-height: 1; }
+  .inn-wrap { display: block; }
+  .inn-row { white-space: nowrap; }
+  .inn-sep { color: #334155; margin: 0 1px; }
+  .date-range { font-size: 0.6rem; color: #475569; letter-spacing: 0.02em; line-height: 1.4; margin-top: 2px; }
 
   .no-games { color: #64748b; text-align: center; padding: 40px; }
   .footer { color: #334155; font-size: 0.72rem; margin-top: 16px; text-align: center; }
@@ -135,7 +136,7 @@
 </head>
 <body>
   <h1>Bullpen Roadmap</h1>
-  <div class="subtitle">Generated June 4, 2026 5:44 PM · 2026-06-04</div>
+  <div class="subtitle">Generated June 4, 2026 6:10 PM · 2026-06-04</div>
   <div class="legend">
     <span class="legend-item"><span class="legend-dot" style="color:#dc2626">9</span> 9th</span>
     <span class="legend-item"><span class="legend-dot" style="color:#d97706">8</span> 8th</span>
@@ -173,49 +174,49 @@
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Bradgley Rodriguez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jason Adam</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Mason Miller</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/29">8</span></div><div class="date-range">5/29–5/29</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Adrian Morejon</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/26–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Jeremiah Estrada</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 22p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Wandy Peralta</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/24–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 29p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Ron Marinaccio</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/24">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/4">6</span></div><div class="date-range">5/24–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Yuki Matsui</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/4">5</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
         </tr></tbody>
         </table>
@@ -242,55 +243,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Jhoan Duran</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">José Alvarado</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/4">9</span></div><div class="date-range">5/27–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 36p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Tanner Banks</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">4</span></div><div class="date-range">5/24–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Brad Keller</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jonathan Bowlan</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span></div><div class="date-range">5/24–5/27</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Nolan Hoffman</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/31">7</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Orion Kerkering</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Tim Mayza</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span></div><div class="date-range">5/24–5/29</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Chase Shugart</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/31">6</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -325,61 +326,61 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Dietrich Enns</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">13</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">13</span></div><div class="date-range">5/25–5/25</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Albert Suárez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/3">4</span></div><div class="date-range">5/30–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 53p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Andrew Kittredge</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/4">9</span></div><div class="date-range">5/26–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Cameron Weston</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/28">9</span></div><div class="date-range">5/28–5/28</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Rico Garcia</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">14p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Anthony Nunez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Grant Wolfram</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">10p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Keegan Akin</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">5/27–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-ok">18p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Tyler Wells</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">11</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">11</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-ok">12p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Yennier Cano</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/4">6</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-ok">1p</span></td>
         </tr></tbody>
         </table>
@@ -406,61 +407,61 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Aroldis Chapman</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/31">9</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Ryan Watson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/28">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 53p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Tommy Kahnle</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">6/4–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Tyler Samaniego</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/29">1</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/29–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Danny Coulombe</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/24">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span></div><div class="date-range">5/24–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Jovani Morán</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/4">6</span></div><div class="date-range">5/24–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Justin Slaten</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/30">7</span></div><div class="date-range">5/30–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Tyron Guerrero</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/28">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span></div><div class="date-range">5/24–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Garrett Whitlock</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span></div><div class="date-range">5/24–5/24</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Greg Weissert</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr></tbody>
         </table>
@@ -495,55 +496,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Cade Smith</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Hunter Gaddis</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 37p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Matt Festa</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/25">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Shawn Armstrong</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/26">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Will Dion</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span></div><div class="date-range">5/26–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Codi Heuer</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/26">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/26–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Tim Herrin</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Colin Holderman</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/2">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Logan Allen</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/25">6</span></div><div class="date-range">5/25–5/25</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -570,49 +571,49 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">David Bednar</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/4">9</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-ok">12p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Ryan Yarbrough</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Camilo Doval</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/27–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Fernando Cruz</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">5/24–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jake Bird</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span></div><div class="date-range">5/25–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Paul Blackburn</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/29–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">10p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Brent Headrick</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/2">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 51p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Tim Hill</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 32p</span></td>
         </tr></tbody>
         </table>
@@ -647,67 +648,67 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Wilkin Ramos</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="6/1">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/4">9</span></div><div class="date-range">6/1–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 61p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Buddy Kennedy</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="6/1">8</span></div><div class="date-range">6/1–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 39p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Caleb Kilian</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/4">9</span></div><div class="date-range">5/27–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Ryan Borucki</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span></div><div class="date-range">5/26–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Tristan Beck</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/31">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/4">8</span></div><div class="date-range">5/31–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 54p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Erik Miller</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">JT Brubaker</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/4">6</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 46p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Keaton Winn</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Matt Gage</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/1">7</span></div><div class="date-range">5/27–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Joel Peguero</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/25">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span></div><div class="date-range">5/25–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Sam Hentges</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/25">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/30">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/4">5</span></div><div class="date-range">5/25–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
         </tr></tbody>
         </table>
@@ -734,55 +735,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Trevor Megill</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">10</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">10p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Aaron Ashby</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 29p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Abner Uribe</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">14p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jake Woodford</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/1">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/4">7</span></div><div class="date-range">5/30–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 68p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Grant Anderson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/1">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/4">5</span></div><div class="date-range">5/26–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 38p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Carlos Rodriguez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/30">5</span></div><div class="date-range">5/30–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#a16207">VAR</span></td>
             <td class="pitcher-name">Chad Patrick</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/27">1</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/1">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 64p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">DL Hall</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/1">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/4">3</span></div><div class="date-range">5/29–6/4</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 67p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#a16207">VAR</span></td>
             <td class="pitcher-name">Shane Drohan</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/27">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/1">1</span></div><div class="date-range">5/27–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 68p</span></td>
         </tr></tbody>
         </table>
@@ -817,73 +818,73 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Tanner Andrews</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/26">8</span></div><div class="date-range">5/25–5/26</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Connor Seabold</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/29–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">3p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Hayden Juenger</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/31–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Louis Varland</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span></div><div class="date-range">5/27–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Tyler Rogers</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span></div><div class="date-range">5/25–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Braydon Fisher</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/26">1</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Jeff Hoffman</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span></div><div class="date-range">5/27–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Yariel Rodríguez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 22p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Adam Macko</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">1</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">17p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Chase Lee</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span></div><div class="date-range">5/24–5/24</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Austin Voth</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/29">2</span></div><div class="date-range">5/29–5/29</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Spencer Miles</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/26">2</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">1</span></div><div class="date-range">5/26–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -914,49 +915,49 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Carlos Carrasco</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/27">5</span></div><div class="date-range">5/24–5/27</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Raisel Iglesias</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Tyler Kinley</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/23">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/23–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Robert Suarez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Dylan Dodd</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/23">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/27">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/28">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span></div><div class="date-range">5/23–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Dylan Lee</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Reynaldo López</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span></div><div class="date-range">5/24–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Didier Fuentes</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span></div><div class="date-range">5/24–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -991,73 +992,73 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Lucas Erceg</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Tyler Tolbert</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span></div><div class="date-range">5/26–5/26</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Daniel Lynch IV</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Eli Morgan</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/1">9</span></div><div class="date-range">5/26–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Eric Cerantola</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/29">8</span></div><div class="date-range">5/29–5/29</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">John Schreiber</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/1">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">10</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Mason Black</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/1">8</span></div><div class="date-range">5/27–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">15p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Matt Strahm</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">6/2–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">13p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Alex Lange</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/1">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Nick Mears</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span></div><div class="date-range">5/27–5/27</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Steven Cruz</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span></div><div class="date-range">5/26–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Luinder Avila</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/26">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/1">1</span></div><div class="date-range">5/26–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 86p</span></td>
         </tr></tbody>
         </table>
@@ -1084,73 +1085,73 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Justin Lawrence</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">6/3–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Taylor Rogers</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">10</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">12p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Cody Laweryson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/29–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Orlando Arcia</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span></div><div class="date-range">5/27–5/27</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Yoendrys Gómez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">11</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">11</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/1">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Anthony Banda</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">John Klein</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/30">7</span></div><div class="date-range">5/30–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Kody Funderburk</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/30">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/1">7</span></div><div class="date-range">5/30–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">16p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Simeon Woods Richardson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/28">1</span></div><div class="date-range">5/25–5/28</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Travis Adams</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/28">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/1">9</span></div><div class="date-range">5/27–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Eric Orze</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/27">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/3">5</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Mike Paredes</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/31">5</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -1189,61 +1190,61 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Hogan Harris</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">4</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Scott Barlow</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/23">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/23–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">17p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Justin Sterner</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">10</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Mark Leiter Jr.</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">4p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Luis Medina</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/24">1</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Joel Kuhnel</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/23">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/3">4</span></div><div class="date-range">5/23–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">13p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">José Suarez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/23">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/26">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">2</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/23–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#a16207">VAR</span></td>
             <td class="pitcher-name">Jack Perkins</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/25">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">3</span></div><div class="date-range">5/25–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Michael Kelly</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/31">3</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#4b5563">MR</span></td>
             <td class="pitcher-name">Jacob Lopez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/24">2</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">1</span></div><div class="date-range">5/24–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -1274,49 +1275,49 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Daniel Palencia</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Caleb Thielbar</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">16p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jacob Webb</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">16p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Phil Maton</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">12p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Ethan Roberts</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">3</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">10</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">8p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Hoby Milner</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Ryan Rolison</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#9ca3af" title="5/26">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">10</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">3p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Trent Thornton</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/31">4</span></div><div class="date-range">5/25–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr></tbody>
         </table>
@@ -1355,55 +1356,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Dennis Santana</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Gregory Soto</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Brandan Bidois</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">9p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Mason Montgomery</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/28">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Cam Sanders</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/31">7</span></div><div class="date-range">5/31–5/31</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Justin Lawrence</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span></div><div class="date-range">5/27–5/27</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Evan Sisk</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/29">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span></div><div class="date-range">5/27–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Wilber Dotel</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/25">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 41p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#6b7280">6th</span></td>
             <td class="pitcher-name">Yohan Ramírez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/24">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/27">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/28">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="5/30">5</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/3">5</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 40p</span></td>
         </tr></tbody>
         </table>
@@ -1430,55 +1431,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Josh Hader</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">6/3–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-ok">17p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Logan VanWey</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/30">9</span></div><div class="date-range">5/30–5/30</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Nate Pearson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Alimber Santa</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">10</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/3">5</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Bryan Abreu</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/28">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 32p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Bryan King</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Enyel De Los Santos</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/28">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/27–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">AJ Blubaugh</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/24">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 45p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Steven Okert</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/28">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
         </tr></tbody>
         </table>
@@ -1517,55 +1518,55 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Blake Treinen</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/30">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#9ca3af" title="6/2">5</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">7p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Jack Dreyer</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="6/1">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">6/1–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Miguel Rojas</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span></div><div class="date-range">5/26–5/26</div></div></td>
             <td class="stat-cell"><span class="wl-ok">—</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Tanner Scott</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Alex Vesia</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/1">7</span></div><div class="date-range">5/25–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">9p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Edgardo Henriquez</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/2">6</span></div><div class="date-range">5/29–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Jonathan Hernández</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/26–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Kyle Hurt</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/25">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/30">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span></div><div class="date-range">5/25–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Will Klein</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/24">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span></div><div class="date-range">5/24–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
         </tr></tbody>
         </table>
@@ -1596,49 +1597,49 @@
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Juan Morillo</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/26">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">10</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/31">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/2">9</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">19p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#dc2626">CL</span></td>
             <td class="pitcher-name">Paul Sewald</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/26">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/27">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/1">9</span></div><div class="date-range">5/26–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">13p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Brandyn Garcia</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/25">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/29">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/31">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/1">8</span></div><div class="date-range">5/25–6/1</div></div></td>
             <td class="stat-cell"><span class="wl-ok">9p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Jonathan Loáisiga</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#d97706" title="5/25">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/29">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="5/31">10</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/2">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#dc2626" title="6/3">9</span></div><div class="date-range">5/25–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#d97706">8th</span></td>
             <td class="pitcher-name">Kevin Ginkel</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/26">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/27">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/31">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/2">8</span></div><div class="date-range">5/26–6/2</div></div></td>
             <td class="stat-cell"><span class="wl-ok">11p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Brandon Pfaadt</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#6b7280" title="5/29">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/3">7</span></div><div class="date-range">5/29–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 37p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Ryan Thompson</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#2563eb" title="5/27">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="5/30">6</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="6/3">8</span></div><div class="date-range">5/27–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-high">⚠ 36p</span></td>
         </tr>
         <tr>
             <td><span class="role-badge" style="background:#2563eb">7th</span></td>
             <td class="pitcher-name">Taylor Clarke</td>
-            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="inning-col"><div class="inn-wrap"><div class="inn-row"><span class="inn-dot" style="color:#dc2626" title="5/24">9</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="5/29">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#d97706" title="5/30">8</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#2563eb" title="6/1">7</span><span class="inn-sep">·</span><span class="inn-dot" style="color:#6b7280" title="6/3">6</span></div><div class="date-range">5/24–6/3</div></div></td>
             <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
         </tr></tbody>
         </table>
