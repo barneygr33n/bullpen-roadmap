@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bullpen Roadmap — 2026-06-04</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1 { font-size: 1.3rem; color: #f8fafc; margin-bottom: 4px; }
+  .subtitle { color: #64748b; font-size: 0.8rem; margin-bottom: 20px; }
+
+  .game-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+  }
+  .game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #334155;
+  }
+  .matchup { font-size: 1rem; font-weight: 700; color: #f8fafc; }
+  .at { color: #64748b; margin: 0 4px; }
+  .game-time { font-size: 0.8rem; color: #94a3b8; }
+
+  .teams-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .teams-grid { grid-template-columns: 1fr; }
+    body { font-size: 13px; padding: 10px; }
+  }
+
+  .team-name { font-weight: 700; font-size: 0.95rem; color: #cbd5e1; display: block; margin-bottom: 8px; }
+
+  .sp-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f172a;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .sp-label {
+    background: #3b82f6;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+  }
+  .sp-name { font-weight: 600; color: #f1f5f9; flex: 1; min-width: 80px; }
+  .outs-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .outs-number { font-weight: 700; color: #34d399; font-size: 0.95rem; }
+  .outs-juice { color: #64748b; font-size: 0.78rem; }
+  .outs-na { color: #475569; font-size: 0.8rem; }
+
+  .ladder-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+  .ladder-table th {
+    text-align: left;
+    color: #64748b;
+    font-weight: 500;
+    padding: 4px 4px 6px;
+    border-bottom: 1px solid #334155;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .ladder-table td {
+    padding: 6px 4px;
+    border-bottom: 1px solid #1e293b;
+    vertical-align: middle;
+  }
+  .ladder-table tr:last-child td { border-bottom: none; }
+
+  .role-badge {
+    display: inline-block;
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+    min-width: 28px;
+    text-align: center;
+  }
+  .pitcher-name { font-weight: 500; color: #e2e8f0; padding-left: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }
+  .inning-col { padding: 0 6px; white-space: nowrap; }
+  .inn-dot { font-weight: 700; font-size: 0.85rem; }
+  .inn-seq { color: #334155; margin: 0 2px; }
+  .stat-cell { color: #94a3b8; white-space: nowrap; text-align: right; }
+
+  .wl-ok   { color: #94a3b8; }
+  .wl-warn { color: #f59e0b; font-weight: 600; }
+  .wl-high { color: #ef4444; font-weight: 700; }
+
+  .inn-wrap { display: inline-flex; flex-direction: column; gap: 1px; vertical-align: middle; }
+  .date-range { font-size: 0.6rem; color: #475569; letter-spacing: 0.02em; line-height: 1; }
+
+  .no-games { color: #64748b; text-align: center; padding: 40px; }
+  .footer { color: #334155; font-size: 0.72rem; margin-top: 16px; text-align: center; }
+
+  .legend {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-bottom: 16px; font-size: 0.75rem; color: #64748b;
+  }
+  .legend-item { display: flex; align-items: center; gap: 4px; }
+  .legend-dot { font-weight: 700; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+  <h1>Bullpen Roadmap</h1>
+  <div class="subtitle">Generated June 4, 2026 5:38 PM · 2026-06-04</div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="color:#dc2626">9</span> 9th</span>
+    <span class="legend-item"><span class="legend-dot" style="color:#d97706">8</span> 8th</span>
+    <span class="legend-item"><span class="legend-dot" style="color:#2563eb">7</span> 7th</span>
+    <span class="legend-item"><span class="legend-dot" style="color:#6b7280">6</span> 6th</span>
+    <span class="legend-item"><span class="legend-dot" style="color:#a16207">VAR</span> = no defined role</span>
+    <span class="legend-item"><span style="color:#ef4444">⚠</span> = 35+ pitches last 3 days</span>
+  </div>
+  
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">San Diego Padres <span class="at">@</span> Philadelphia Phillies</span>
+                <span class="game-time">12:05 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">San Diego Padres</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Lucas Giolito</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Bradgley Rodriguez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jason Adam</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Mason Miller</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Adrian Morejon</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Jeremiah Estrada</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 22p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Wandy Peralta</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 29p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Ron Marinaccio</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Yuki Matsui</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Philadelphia Phillies</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Zack Wheeler</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Jhoan Duran</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">José Alvarado</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 36p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Tanner Banks</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Brad Keller</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jonathan Bowlan</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Nolan Hoffman</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Orion Kerkering</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Tim Mayza</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Chase Shugart</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Baltimore Orioles <span class="at">@</span> Boston Red Sox</span>
+                <span class="game-time">12:35 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Baltimore Orioles</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Trevor Rogers</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Dietrich Enns</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">13</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Albert Suárez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 53p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Andrew Kittredge</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Cameron Weston</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Rico Garcia</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">14p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Anthony Nunez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Grant Wolfram</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">10p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Keegan Akin</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">18p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Tyler Wells</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">11</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">12p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Yennier Cano</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">1p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Boston Red Sox</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Brayan Bello</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Aroldis Chapman</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Ryan Watson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 53p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Tommy Kahnle</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Tyler Samaniego</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Danny Coulombe</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Jovani Morán</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Justin Slaten</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Tyron Guerrero</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Garrett Whitlock</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Greg Weissert</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Cleveland Guardians <span class="at">@</span> New York Yankees</span>
+                <span class="game-time">12:35 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Cleveland Guardians</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Slade Cecconi</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Cade Smith</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Hunter Gaddis</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 37p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Matt Festa</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Shawn Armstrong</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Will Dion</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Codi Heuer</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Tim Herrin</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Colin Holderman</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 34p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Logan Allen</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">New York Yankees</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Carlos Rodón</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">David Bednar</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">12p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Ryan Yarbrough</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Camilo Doval</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Fernando Cruz</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jake Bird</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Paul Blackburn</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">10p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Brent Headrick</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 51p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Tim Hill</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 32p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">San Francisco Giants <span class="at">@</span> Milwaukee Brewers</span>
+                <span class="game-time">1:10 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">San Francisco Giants</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Adrian Houser</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Wilkin Ramos</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 61p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Buddy Kennedy</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 39p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Caleb Kilian</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Ryan Borucki</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Tristan Beck</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 54p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Erik Miller</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">JT Brubaker</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 46p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Keaton Winn</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Matt Gage</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Joel Peguero</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Sam Hentges</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Milwaukee Brewers</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Coleman Crow</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Trevor Megill</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">10p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Aaron Ashby</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 29p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Abner Uribe</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">14p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jake Woodford</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 68p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Grant Anderson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 38p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Carlos Rodriguez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#a16207">VAR</span></td>
+            <td class="pitcher-name">Chad Patrick</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 64p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">DL Hall</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 67p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#a16207">VAR</span></td>
+            <td class="pitcher-name">Shane Drohan</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 68p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Toronto Blue Jays <span class="at">@</span> Atlanta Braves</span>
+                <span class="game-time">6:15 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Toronto Blue Jays</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Mason Fluharty</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Tanner Andrews</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Connor Seabold</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">3p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Hayden Juenger</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Louis Varland</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Tyler Rogers</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Braydon Fisher</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Jeff Hoffman</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Yariel Rodríguez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 22p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Adam Macko</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">17p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Chase Lee</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Austin Voth</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Spencer Miles</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Atlanta Braves</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Chris Sale</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">18.5 outs</span>
+            <span class="outs-juice">O -102 / U -132</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Carlos Carrasco</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Raisel Iglesias</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Tyler Kinley</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Robert Suarez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Dylan Dodd</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Dylan Lee</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Reynaldo López</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Didier Fuentes</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Kansas City Royals <span class="at">@</span> Minnesota Twins</span>
+                <span class="game-time">6:40 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Kansas City Royals</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Seth Lugo</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Lucas Erceg</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Tyler Tolbert</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Daniel Lynch IV</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Eli Morgan</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Eric Cerantola</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">John Schreiber</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Mason Black</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">15p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Matt Strahm</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">13p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Alex Lange</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Nick Mears</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Steven Cruz</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Luinder Avila</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 86p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Minnesota Twins</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Andrew Morris</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Justin Lawrence</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Taylor Rogers</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">12p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Cody Laweryson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Orlando Arcia</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Yoendrys Gómez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">11</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 30p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Anthony Banda</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">John Klein</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Kody Funderburk</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">16p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Simeon Woods Richardson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Travis Adams</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Eric Orze</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Mike Paredes</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Athletics <span class="at">@</span> Chicago Cubs</span>
+                <span class="game-time">7:05 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Athletics</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">J.T. Ginn</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">15.5 outs</span>
+            <span class="outs-juice">O 102 / U -138</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Hogan Harris</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Scott Barlow</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">17p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Justin Sterner</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Mark Leiter Jr.</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">4p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Luis Medina</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">1</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Joel Kuhnel</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">13p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">José Suarez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#a16207">VAR</span></td>
+            <td class="pitcher-name">Jack Perkins</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Michael Kelly</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">3</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#4b5563">MR</span></td>
+            <td class="pitcher-name">Jacob Lopez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">2</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">1</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Chicago Cubs</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Shota Imanaga</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">17.5 outs</span>
+            <span class="outs-juice">O -178 / U 128</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Daniel Palencia</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Caleb Thielbar</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">16p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jacob Webb</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">16p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Phil Maton</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">12p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Ethan Roberts</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">3</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">8p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Hoby Milner</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 27p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Ryan Rolison</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">3p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Trent Thornton</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">4</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Pittsburgh Pirates <span class="at">@</span> Houston Astros</span>
+                <span class="game-time">7:10 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Pittsburgh Pirates</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Jared Jones</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">14.5 outs</span>
+            <span class="outs-juice">O -178 / U 130</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Dennis Santana</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Gregory Soto</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Brandan Bidois</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">9p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Mason Montgomery</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Cam Sanders</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Justin Lawrence</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Evan Sisk</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Wilber Dotel</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 41p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#6b7280">6th</span></td>
+            <td class="pitcher-name">Yohan Ramírez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 40p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Houston Astros</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Kai-Wei Teng</span>
+            <div class="outs-line outs-na">Outs line N/A</div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Josh Hader</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">17p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Logan VanWey</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Nate Pearson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 33p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Alimber Santa</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 26p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Bryan Abreu</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 32p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Bryan King</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Enyel De Los Santos</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">AJ Blubaugh</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 45p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Steven Okert</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 21p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="game-header">
+                <span class="matchup">Los Angeles Dodgers <span class="at">@</span> Arizona Diamondbacks</span>
+                <span class="game-time">8:40 PM CT</span>
+            </div>
+            <div class="teams-grid">
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Los Angeles Dodgers</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Justin Wrobleski</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">17.5 outs</span>
+            <span class="outs-juice">O -158 / U 116</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Blake Treinen</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#9ca3af" title="">5</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">7p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Jack Dreyer</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 25p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Miguel Rojas</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">—</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Tanner Scott</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 20p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Alex Vesia</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">9p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Edgardo Henriquez</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Jonathan Hernández</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Kyle Hurt</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 24p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Will Klein</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 23p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+                
+    <div class="team-block">
+        <div class="team-header">
+            <span class="team-name">Arizona Diamondbacks</span>
+        </div>
+        <div class="sp-row">
+            <span class="sp-label">SP</span>
+            <span class="sp-name">Ryne Nelson</span>
+            
+        <div class="outs-line">
+            <span class="outs-number">17.5 outs</span>
+            <span class="outs-juice">O 112 / U -154</span>
+        </div>
+        </div>
+        <table class="ladder-table">
+            <thead>
+                <tr>
+                    <th>Role</th><th>Pitcher</th>
+                    <th>Last 6 Inn. Entered</th>
+                    <th>3d Load</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Juan Morillo</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">19p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#dc2626">CL</span></td>
+            <td class="pitcher-name">Paul Sewald</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">13p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Brandyn Garcia</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">9p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Jonathan Loáisiga</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">10</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#dc2626" title="">9</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 28p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#d97706">8th</span></td>
+            <td class="pitcher-name">Kevin Ginkel</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-ok">11p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Brandon Pfaadt</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 37p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Ryan Thompson</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span></span></td>
+            <td class="stat-cell"><span class="wl-high">⚠ 36p</span></td>
+        </tr>
+        <tr>
+            <td><span class="role-badge" style="background:#2563eb">7th</span></td>
+            <td class="pitcher-name">Taylor Clarke</td>
+            <td class="inning-col"><span class="inn-wrap"><span class="inn-dot" style="color:#dc2626" title="">9</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#d97706" title="">8</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#2563eb" title="">7</span><span class="inn-seq">·</span><span class="inn-dot" style="color:#6b7280" title="">6</span></span></td>
+            <td class="stat-cell"><span class="wl-warn">△ 31p</span></td>
+        </tr></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+  <div class="footer">MLB Stats API · The Odds API · Sequence: oldest → newest</div>
+</body>
+</html>
